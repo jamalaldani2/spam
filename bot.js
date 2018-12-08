@@ -270,7 +270,7 @@ client.on('message', message => {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-KiNg66S.on('message', message => {
+  kiNg66S.on('message', message => {
   if (!message.content.startsWith(PREFIX)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
