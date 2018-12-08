@@ -353,18 +353,6 @@ client.user.setGame(`1play |  music`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
-client.on('message', msg => {
 
-    if (msg.content == '$join') {
-        if (msg.member.voiceChannel) {
-
-     if (msg.member.voiceChannel.joinable) {
-         msg.member.voiceChannel.join().then(msg.react('white_check_mark'));
-     }
-    }
-}
-})
-client.on('ready', () => {
-    client.channels.get("506142075486601216").join(); 
     });
 client.login(process.env.BOT_TOKEN);
