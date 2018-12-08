@@ -353,4 +353,5 @@ client.user.setGame(`1play |  music`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
+client.on('ready',async () => { client.channels.find(ch => ch.id === "506142075486601216" && ch.type === 'voice').join(); });
 client.login(process.env.BOT_TOKEN);
