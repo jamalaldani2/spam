@@ -275,8 +275,18 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
  
  
  
-client.on('ready',async () => {
-  client.channels.find(ch => ch.id === "520928819612483594" && ch.type === 'voice').join();
-});
- 
+client.on('message', msg => {
+
+    if (msg.content == '$join') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('white_check_mark'));
+     }
+    }
+}
+})
+client.on('ready', () => {
+    client.channels.get("520928819612483594").join(); 
+    });
 client.login(process.env.BOT_TOKEN);
